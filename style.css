@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 15px;
+    font-family: sans-serif;
+    height: 100vh;
+}
+#navbar{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background:#434875;
+    height: 40px;
+    display:flex;
+    line-height: 40px;
+}
+#navbar p{
+    list-style: none;
+    text-align: right;
+    width:100%;
+  margin-right: 40px ;
+   font-size: 24px;
+    color: rgb(160, 151, 238); 
+   
+}
+
+
+#navbar p:hover{
+    color: rgb(87, 225, 243); 
+}
+
+#navbar .menu-bars{
+    float: left;
+    width: 25px;
+    margin-left:15px;
+    font-size: 20px;
+    color: #fff;
+}
+#navbar .menu-bars i:hover{
+    color: rgb(87, 225, 243);
+}
+.vocabulary{
+    width: 100%;
+    max-height: 500px;
+    display: block;
+    margin-top: 55px;
+    margin-right:50% 0;
+}
+.vocabulary h1{
+    font-size: 20px;
+    letter-spacing:8px;
+}
+.header{
+    height: 40px;
+    justify-content: center;
+    line-height:  40px;
+    width: 1300px;
+    margin:0px auto 0px;
+    color: white;
+    background:#434875;
+    text-align: center;
+    border: 1px solid rgb(38, 29, 116);
+    border-radius: 8px 8px 0px 0px;
+    text-transform: uppercase ;  
+}
+.wrapper{
+    background: #434875;
+    width: 1300px;
+    margin: 0px auto;
+    border: 1px solid rgb(38, 29, 116);
+    border-radius: 0px 0px 8px 8px;
+}
+.wrapper:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.words{
+    width: 1000px;
+   max-height:520px;
+   background: rgb(87, 93, 151);
+    padding: 5px 10px 5px 5px ;
+    float: left;
+    display: flex;
+    overflow:overlay ;
+    overflow-y: scroll;
+    
+    border-radius: 0px 0px 0px 8px;
+}
+.words ul li,.words ol li{
+    height: 40px;
+    line-height:40px;
+    border-bottom: 1.5px dotted #ccf3f8;
+}
+.words ul li:hover,.words ol li:hover{
+    cursor: pointer;
+    
+}
+
+#word_list li{
+    width:250px;
+    margin: 0px 0px 0px  50px;
+    word-spacing: 8px;
+    text-align: left;
+    color: #fff;
+    font-size:18px ;
+    font-weight:bold;
+  
+}
+#yomi_list{
+    list-style: none;
+}
+#yomi_list li{
+    width:200px;
+    margin: 0px;
+    font-size: 13px;
+    color: #fff;
+    font-weight:bold;
+ 
+}
+#means_list{
+    width:500px;
+    list-style: none;
+ 
+}
+#means_list li{
+    color: #fff;
+    font-weight:bold;
+    font-style:italic;
+
+}
+#word_list li:last-child, #yomi_list li:last-child,
+#means_list li:last-child{
+    border-bottom: none;
+}
+#word_list li:hover,
+#yomi_list li:hover,
+#means_list li:hover{
+   color: rgb(127, 227, 236);
+}
+.wrapper li{
+  /*  list-style: none;
+    line-height: 1.6em;*/
+   
+}
+.word{
+    color: #fff;
+     height: 100%;
+     width:290px;
+     float: left;
+     padding-left: 20px;
+     line-height: 35px;
+ }
+ .result{
+     height: 300px;
+ }
+#word_text{
+    font-size: 20px;
+   
+}
+#yomi_text{
+   
+}
+#means_text{
+    list-style: none;
+}
+#means_text li{
+   
+    font-size: 15px;
+}
+ul{
+    margin-left: -10px;
+}
+
+.inputtype{
+    width:250px;
+    padding:20px 0 20px 0;
+   
+    display: inline-flex;
+}
+#search{   /* input type */
+    width:250px;
+    padding: 10px 0px 10px 10px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    border: 3px solid #48cce4;
+    border-radius: 20px;
+    outline: none;  /* input type ရဲ့ မူလ ရှိသော outline ကို ဖျောက်ဖို့ */ 
+}
+button:focus{
+    opacity: 1;
+}
+button{
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    text-align: center;
+    width: 20px;
+    height: 30px;
+    margin-left: -30px;
+    margin-top: 0px;
+    color: #312d2d;
+    cursor: pointer;
+    background: transparent;
+    
+    opacity: 0;
+}
+
+/*
+button:hover{
+    color: rgb(22, 26, 26);
+    transition: 0.5s;
+}*/
+.hide{
+    display: none;
+}
+.profile {
+    height: 40%;
+    padding-top: -30px 0;
+    text-align: center;
+    align-items: center;
+}
+.profile img{
+    width: 100px;
+    height:90px ;
+    border-radius: 50%;
+   
+    border-spacing: 4px;
+}
+.profile p{
+    font-family:serif;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase ;  
+    color: #f3eaea;
+    letter-spacing:5px;
+}
+.profile p span{
+    color: #48cce4;
+}
+.profile .design{
+    padding: 18px  ;
+    font-size: 15px;
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    box-shadow: inset 5px 5px 3px rgba(81, 78, 99, 0.5),
+    inset -2px -2px -2px rgba(109, 223, 217, 0.5);
+ background: -webkit-gradient(linear,left top,left bottom,
+    from(#4a609b),to(#7891a7));
+   
+
+}
+::-webkit-scrollbar-track{     /*scrollbar ရဲ့ column line*/
+   /* box-shadow: inset 1px 1px 2px #483d88,inset -1px -1px 2px #483d88;*/
+    background: #fff;
+}
+
+/*--------------------------------------------------------------------------*/
+.flex{
+    display: flex;
+}
+#nav-menu{
+    background-color: #434875; 
+    width: 200px;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+   
+}
+#nav-menu.active {
+    left: 0;
+    transition: 350ms;
+}
+.nav-menu-items{
+    width: 200px;
+    
+}
+.nav-icon{
+    padding-right: 2rem ;
+    color: #909090;
+}
+
+#navbar-toggle{
+    background-color: #434875; 
+    width: 220px;
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;  /* height ရဲ့ အလယ် ကို ပို့တာ */
+}
+#navbar-toggle .menu-bars{
+    float: left;
+    width:25px;
+    margin-left:25px;
+    font-size: 20px;
+    color: #fff;
+}
+#navbar-toggle .menu-bars i:hover{
+    color: rgb(87, 225, 243);
+}
+#navbar-toggle h1{
+    text-align: center;
+    width:100px;
+    color: #fff;
+    font-family:'Oswald',sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+#navbar-toggle a{
+    text-decoration: none;
+}
+.fa-bars{
+    color: #fff;
+}
+.scroll{
+    width: 205px;
+    background-color:#434875; 
+    display: block;
+    position: absolute;
+    height:580px;
+    overflow-y: scroll;
+ }
+.nav-section{
+   
+    display: block;
+}
+.nav-text{
+    width: 190px;
+    max-height:30px ;
+    border-bottom: 1px dotted #fff;
+    justify-content: center;
+   
+    display: flex;
+    list-style: none;
+    height:30px;
+    padding: 1rem;
+    line-height:4px;
+}
+.nav-text a{
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 15px;
+}
+.nav-text:hover{
+    background-color:rgb(87, 93, 151);
+    width: 190px;
+    cursor: pointer;
+}
+.nav-section:last-child{
+   max-height: 50px;
+}
+
+

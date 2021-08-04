@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Dictionary Lesson 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+<body>
+    <div id="navbar">
+        <a href="#"  class="menu-bars" id="show-menu"><i class="fas fa-bars"></i></a>
+        
+        <p>Minna no Nihon-Go </p>
+       
+       
+    </div>
+   
+   
+    <!---------------------------------------------------------------------->
+    <nav class="flex">
+       
+    <div id="nav-menu">
+        <ul class="nav-menu-items">
+            <div id="navbar-toggle">
+                <a href="#" class="menu-bars" id="hide-menu"><i class="fas fa-bars nav-icon"></i></a>
+                <a href="#"><h1>LESSONS</h1></a>
+            </div>
+
+            <div class="scroll">
+                <hr/>
+                <div class="nav-section">
+                <li class="nav-text"><a href="index.html.html">Lesson 1</a></li>
+                <li class="nav-text"><a href="DictionaryJlesson2.html">Lesson 2</a></li>
+                <li class="nav-text"><a href="DictionaryJlesson3.html">Lesson 3</a></li>
+                <li class="nav-text"><a href="#">Lesson 4</a></li>
+                <li class="nav-text"><a href="#">Lesson 5</a></li>
+                <li class="nav-text"><a href="#">Lesson 6</a></li>
+                <li class="nav-text"><a href="#">Lesson 7</a></li>
+                <li class="nav-text"><a href="#">Lesson 8</a></li>
+                <li class="nav-text"><a href="#">Lesson 9</a></li>
+                <li class="nav-text"><a href="#">Lesson 10</a></li>
+                <li class="nav-text"><a href="#">Lesson 11</a></li>
+                <li class="nav-text"><a href="#">Lesson 12</a></li>
+                <li class="nav-text"><a href="#">Lesson 13</a></li>
+                <li class="nav-text"><a href="#">Lesson 14</a></li>
+                <li class="nav-text"><a href="#">Lesson 15</a></li>
+                <li class="nav-text"><a href="#">Lesson 16</a></li>
+                <li class="nav-text"><a href="#">Lesson 17</a></li>
+                <li class="nav-text"><a href="#">Lesson 18</a></li>
+                <li class="nav-text"><a href="#">Lesson 19</a></li>
+                <li class="nav-text"><a href="#">Lesson 20</a></li>
+                <li class="nav-text"><a href="#">Lesson 21</a></li>
+                <li class="nav-text"><a href="#">Lesson 22</a></li>
+                <li class="nav-text"><a href="#">Lesson 23</a></li>
+                <li class="nav-text"><a href="#">Lesson 24</a></li>
+                <li class="nav-text"><a href="#">Lesson 25</a></li>
+                <li class="nav-text"><a href="DictionaryJAlllesson2.html">All Lessons</a></li>
+                <li class="nav-text"><a href="#"></a></li>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <!----------------------------------------------------------------------------->
+    <div class="vocabulary">
+        <div class="header">
+        <h1>Lesson 3 </h1>
+        </div>
+    
+        <div class="wrapper">
+            <!-------------- vocabulary list ----------------->
+            <div class="words">
+            <!--<ul id="number"></ul>-->  
+                <ol type="1" id="word_list"></ol>
+                <ol id="yomi_list"> </ol>
+                <ol id="means_list"> </ol>
+            </div>
+            <!-------------- search list ----------------->
+            <div class="word">
+                <div class="inputtype">
+                <input type="text" id="search"  value=" "  placeholder="search...">
+
+                <button  onclick="document.getElementById('search').value = ''" ><i class="fas fa-times"></i></button>
+                
+               <!-- <button onclick="search()">Search</button>-->
+               
+                </div>
+                <div class="result">
+                <h2 id="word_text"></h2>
+                <p id="yomi_text"></p>
+                <hr>
+               <!--<h4></h4>--> 
+                <li id="means_text"></li>
+            </div>
+        </div>
+        <div class="profile">
+            <p class="design">Design <span>By</span></p>
+            <img src="Htet Yarzar Bo passport.jpg" alt="Htet Yarzar Bo">
+            <p>Khun Htet <span>Yarzar bo</span></p>
+        </div>
+    </div>
+    <!-------------- search list end ----------------->
+    </div>
+</nav>
+<script>
+    var dictionary =  [
+{ word:"ここ"  　   ,yomi:"ここ"  　　　,mean:["ဒီနေရာ"]             　　　,remark:""},  　　　　　　　
+{ word:"そこ"  　   ,yomi:"そこ"  　　　,mean:["ဟိုနေရာ"]               　　,remark:""},  　　　　　　　　　　　　
+{ word:"あそこ"   　,yomi:"あそこ"  　　,mean:["ဟိုးနေရာ"]               　,remark:""},  　　　　　　　　　　　　　
+{ word:"どこ"  　   ,yomi:"どこ"  　　　,mean:["ဘယ်နေရာ"]               　　,remark:""},  　　　　　　　　　　　　
+{ word:"こちら"  　 ,yomi:"こちら"  　  ,mean:["ဒီဖက်","ဒီနေရာ"]         ,remark:"ယဉ်ကျေးသောအသုံးအနှုန်း"},
+
+{ word:"そちら" 　  ,yomi:"そちら"  　    ,mean:["ဟိုဖက်","ဟိုနေရာ"]       ,remark:"ယဉ်ကျေးသောအသုံးအနှုန်း"},
+
+{ word:"あちら" 　  ,yomi:"あちら"  　    ,mean:["ဟိုးဖက်","ဟိုးနေရာ"]      ,remark:"ယဉ်ကျေးသောအသုံးအနှုန်း"},
+
+{ word:"どちら"     ,yomi:"どちら"         ,mean:["ဘယ်ဖက်","ဘယ်နေရာ"]    ,remark:"ယဉ်ကျေးသောအသုံးအနှုန်း"},
+{ word:"教室"  　   ,yomi:"きょうしつ"  　　　,mean:["စာသင်ခန်း"]               　　　　　　　,remark:""},
+{ word:"食堂"  　   ,yomi:"しょくどう"  　　　,mean:["ထမင်းစားခန်း","ကန်တင်း"]            ,remark:""},
+{ word:"事務所"  　 ,yomi:"じむしょ"  　　　,mean:["ရုံးခန်း"]               　　　　　　　,remark:""},
+{ word:"会議室"  　 ,yomi:"かいぎしつ"  　　　,mean:["အစည်းအဝေးခန်း"]               　　　,remark:""},
+{ word:"受付"  　   ,yomi:"うけつけ"  　　　,mean:["ဧည့်ကြိုစားပွဲ"]               　　　　　　　,remark:""},
+{ word:"ロビー"  　 ,yomi:"lobby"  　　　,mean:["ဧည့်ခန်း"]               　　　　　　　,remark:""},
+{ word:"部屋"  　   ,yomi:"へや"  　　　,mean:["အခန်း"]               　　　　　　　,remark:""},
+{ word:"トイレ"  　 ,yomi:"toilet"  　　　,mean:["သန့်စင်ခန်း"]               　　　　　　　,remark:""},
+{ word:"御手洗い"  　,yomi:"おてあらい"  　　　,mean:["သန့်စင်ခန်း"]               　　　　　　,remark:""},
+
+{ word:"階段"  　   ,yomi:"かいだん"  　　　,mean:["လှေကား"]               　　　　　　　,remark:""},
+
+{ word:"エレベーター"  　,yomi:"elevator"  　　　,mean:["ဓါတ်လှေကား"]               　　　,remark:""},
+
+{ word:"エスカレーター"  　,yomi:"escalator"  　　　,mean:["စက်လှေကား"]               　　,remark:""},
+{ word:"自動販売機"     ,yomi:"じどうはんばいき" ,mean:["အလိုအလျောက်ရောင်းချသောစက်"] ,remark:""},
+{ word:"電話"  　   ,yomi:"でんわ"  　　　,mean:["တယ်လီဖုန်း"]               　　　　　　,remark:""},
+{ word:"お国"  　   ,yomi:"おくに"  　　　,mean:["နိုင်ငံ"]               　　　　　　　,remark:""},
+{ word:"会社"  　   ,yomi:"かいしゃ"  　　　,mean:["ကုမ္မဏီ"]               　　　　　　　,remark:""},
+{ word:"家"  　     ,yomi:"うち"  　　　,mean:["အိမ်"]               　　　　　　　,remark:""},
+{ word:"靴"  　     ,yomi:"くつ"  　　　,mean:["ဖိနပ်"]               　　　　　　　,remark:""},
+
+{ word:"ネクタイ"  　,yomi:"necktie"  　　,mean:["နက်ကတိုင်","လည်စည်း"]            ,remark:""},
+
+{ word:"ワイン"  　,yomi:"wine"  　　　,mean:["ဝိုင်"]               　　　　　　　,remark:""},
+
+{ word:"売り場"  　,yomi:"うりば"  　　　,mean:["အရောင်းဆိုင်"]               　　　　　　　,remark:""},
+{ word:"地下"  　,yomi:"ちか"  　　　,mean:["မြေအောက်"]               　　　　　　　,remark:""},
+{ word:"ー階"  　,yomi:"いっかい"  　　　,mean:["တစ်ထပ်"]               　　　　　　　,remark:""},
+{ word:"何階"  　,yomi:"なんがい"  　　　,mean:["ဘယ်နှစ်ထပ်"]               　　　　　　　,remark:""},
+{ word:"―円"  　,yomi:"―えん"  　　　,mean:["―ယန်း"]               　　　　　　　,remark:""},
+
+{ word:"幾ら"  　,yomi:"いくら"  　　　,mean:["ဘယ်လောက်"]               　　　　　　　,remark:""},
+{ word:"百"  　,yomi:"ひゃく"  　　　,mean:["ရာ"]               　　　　　　　,remark:""},
+
+{ word:"千"  　,yomi:"せん"  　　　,mean:["ထောင်"]               　　　　　　　,remark:""},
+
+{ word:"万"  　,yomi:"まん"  　　　,mean:["သောင်း"]               　　　　　　　,remark:""},
+
+
+    ];
+</script>
+    <script src="DictionaryJ.js">
+
+    </script>
+</body>
+</html>
